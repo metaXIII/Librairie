@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 integer = input("Combien de nombre entiers ?")
 try:
     integer = int(integer)

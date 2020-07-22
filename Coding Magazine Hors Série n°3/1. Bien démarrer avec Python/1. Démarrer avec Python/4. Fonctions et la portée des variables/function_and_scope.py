@@ -1,3 +1,6 @@
+#!/usr/bin/env python2
+# coding=utf-8
+
 # Cette fonction ne sert pas vraiment, on la considère void, elle ne renvoit rien
 def modify_string(string):
     string += " La fonction modify string a été appelée"

@@ -1,3 +1,6 @@
+#!/usr/bin/env python2
+# coding=utf-8
+
 # Variables et types de données.
 # 4 types possibles :
 #     -   Integer
