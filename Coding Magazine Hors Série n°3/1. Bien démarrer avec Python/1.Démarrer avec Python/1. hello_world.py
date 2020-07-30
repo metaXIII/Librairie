@@ -2,7 +2,9 @@
 # coding=utf-8
 
 import sys
+import datetime
 
+begin_time = datetime.datetime.now()
 print("Hello world !")
 
 # Pas ajouté dans le magazine, je le rajoute pour vérifier la version de python exécutée.
@@ -13,3 +15,4 @@ print(sys.version)
 print("Version info.")
 print(sys.version_info)
 
+print(datetime.datetime.now() - begin_time)
