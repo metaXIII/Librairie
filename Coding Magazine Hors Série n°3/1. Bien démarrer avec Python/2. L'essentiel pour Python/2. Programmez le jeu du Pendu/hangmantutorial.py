@@ -96,7 +96,6 @@ def game():
             hangedman(letters_wrong - 1)
         print " ".join(clue)
         print "Guesses : ", letters_tried
-        print "letters_wrong", letters_wrong
         if letters_wrong == tries:
             print "Fin du jeu"
             print "Le mot était ", word
