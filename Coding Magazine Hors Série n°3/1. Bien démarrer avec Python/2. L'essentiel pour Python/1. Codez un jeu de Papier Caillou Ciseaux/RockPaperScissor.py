@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+# -*- coding: utf-8 -*-
 
 import random
 import time
@@ -30,7 +31,7 @@ def game():
 
 def move():
     while True:
-        player = input("Rock = 1\nPaper = 2\nScissor = 3`\nMake a move :)\n")
+        player = raw_input("Rock = 1\nPaper = 2\nScissor = 3`\nMake a move :)\n")
         try:
             player = int(player)
             if player in (1, 2, 3):
@@ -61,7 +62,7 @@ def result(player, computer):
 
 
 def play_again():
-    answer = input("Would you like to play again? y/n\n")
+    answer = raw_input("Would you like to play again? y/n\n")
     if answer in ("y", "Y", "yes", "Yes", "of course", "Of course"):
         return answer
     else:
@@ -70,9 +71,9 @@ def play_again():
 
 def scores():
     global player_score, computer_score
-    print("High Score")
-    print("Player : ", player_score)
-    print("Computer : ", computer_score)
+    print("HIGH SCORES")
+    print "Player :", player_score
+    print "Computer :", computer_score
 
 
 if __name__ == '__main__':
