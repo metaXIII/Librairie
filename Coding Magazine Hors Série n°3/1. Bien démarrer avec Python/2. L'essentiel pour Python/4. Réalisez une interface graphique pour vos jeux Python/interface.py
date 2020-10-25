@@ -22,9 +22,9 @@ rps_button.pack()
 
 hm_button = Button(mainframe, text="Jeu du pendu", command=hangmantutorial.gui)
 hm_button.pack()
-#
-# pd_button = Button(mainframe, text="Pokerdice", command=pokerdice.start())
-# pd_button.pack()
+
+pd_button = Button(mainframe, text="Pokerdice", command=pokerdice.gui)
+pd_button.pack()
 
 exit_button = Button(mainframe, text="Quitter", command=root.destroy)
 exit_button.pack(side=BOTTOM)
