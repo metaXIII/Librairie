@@ -1,3 +1,8 @@
 # Utilisation des commandes
 
+Pour une raison encore inconnue, l'import a du mal à se faire sous windows et WSL.
+
+Les fichiers sont testés et fonctionnent avec Manjaro
+
 gcc -I /usr/include/python2.7 -lpython2.7 pythonInterpreter.c
+./a.out
