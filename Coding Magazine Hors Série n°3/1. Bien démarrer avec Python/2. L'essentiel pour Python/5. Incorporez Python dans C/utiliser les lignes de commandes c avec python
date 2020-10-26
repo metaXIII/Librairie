@@ -6,3 +6,7 @@ Les fichiers sont testés et fonctionnent avec Manjaro
 
 gcc -I /usr/include/python2.7 -lpython2.7 pythonInterpreter.c
 ./a.out
+
+
+Sur Windows, celà devrait être : 
+gcc -I/Env/Python/2.7.18/include -L/Env/Python/2.7.18/libs pythonInterpreter.c
