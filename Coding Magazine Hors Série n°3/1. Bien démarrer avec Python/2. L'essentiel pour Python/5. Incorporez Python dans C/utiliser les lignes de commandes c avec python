@@ -1,12 +1,9 @@
 # Utilisation des commandes
+Les fichiers sont testés et fonctionnent avec Manjaro et Windows
 
-Pour une raison encore inconnue, l'import a du mal à se faire sous windows et WSL.
-
-Les fichiers sont testés et fonctionnent avec Manjaro
-
+Linux :
 gcc -I /usr/include/python2.7 -lpython2.7 pythonInterpreter.c
 ./a.out
 
-
-Sur Windows, celà devrait être : 
-gcc -I/Env/Python/2.7.18/include -L/Env/Python/2.7.18/libs pythonInterpreter.c
+Sur Windows, c'est : 
+gcc -ID:\Env\Python\2.7.18\include -LD:\Env\Python\2.7.18\libs printtime.c -lpython27
