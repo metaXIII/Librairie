@@ -2,7 +2,7 @@
 Les fichiers sont testés et fonctionnent avec Manjaro et Windows
 
 Linux :
-gcc -I /usr/include/python2.7 -lpython2.7 pythonInterpreter.c
+gcc -I /usr/include/python2.7 pythonInterpreter.c -lpython2.7
 ./a.out
 
 Sur Windows, c'est : 
