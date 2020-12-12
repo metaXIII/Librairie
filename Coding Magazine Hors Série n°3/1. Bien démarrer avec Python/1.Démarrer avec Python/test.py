@@ -12,7 +12,7 @@ print(sys.version)
 print("Version info.")
 print(sys.version_info)
 i = 0
-while (i < 100000000):
+while (i < 100000):
     print(i)
     i += 1
 
