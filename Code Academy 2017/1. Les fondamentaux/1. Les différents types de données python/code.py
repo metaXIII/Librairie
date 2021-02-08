@@ -15,19 +15,14 @@ print("hello"[0])  # h
 print(["hello", "world"][0])  # hello
 print()
 
-# Obtenir le type d'une variable : type
-print(type(4))
-print(type("hello world"))
-print(type(["aze", "aze2"]))
 
-# Méthodes des types :
+# Les méthodes :
 list = ["banana", "cake", "tiffin"]
 print(list)
 list.append("chicken")
 print(list)
 list.insert(1, "something new")
 print(list)
-
 word = "HELLO"
 print(word)
 print(word.lower())
@@ -35,11 +30,21 @@ print(word.lower())
 
 # Les variables :
 declaration = "une nouvelle variable"
+age = 30
+autre_var = []
 print(declaration)
 print(type(word))
 print(type(list))
 
-# Tuples
+# Obtenir le type d'une variable : type
+print(type(4))
+print(type("hello world"))
+print(type(["aze", "aze2"]))
+
+
+# D'autres types de données
+
+## Tuples
 t = {"aze", "aze2"}
 print(t)
 try:
@@ -58,10 +63,24 @@ print(dictionnary["linux"])
 dictionnary["linux"] = "better than Windows"
 print(dictionnary["linux"])
 
-# Boucles :
+## Les listes
+list = []
+list.append("something")
+
+print(list)
 print()
+
+# Boucles :
+
 for item in list:
     print(item)
+list = [0,3,4,2,1]
+for item in list:
+    print(item)
+list.sort()
+for item in list:
+    print(item)
+
 
 print()
 print("Fin du programme")
