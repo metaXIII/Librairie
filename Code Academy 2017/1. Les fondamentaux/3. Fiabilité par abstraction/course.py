@@ -26,5 +26,4 @@ def pythag(a, b):
     return sqrt(a2b2, 1.0)
 
 if __name__ == "__main__":
-    # execute only if run as a script
     print(pythag(2,3))
