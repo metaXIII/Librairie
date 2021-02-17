@@ -1,15 +1,18 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-f = open("list.txt", "r")
+import os
 
-# tm = open("./lib/timeMachine.txt", mode="r", encoding="utf-8")
+# f = open(os.environ["HOME"] + "/list.txt", "r")
 
 def doYourWork():
-    print("\"début\"")
-    for line in f:
-        print(line.strip("\n"))
-    print("\"fin\"")
+    f = open("list.txt", "rb")
+    print(f.readline())
+    # print("\"début\"")
+    # for line in f:
+    #     print(line.strip("\n"))
+    # print("\"fin\"")
+    f.close()
 
 if __name__ == "__main__":
     doYourWork()
