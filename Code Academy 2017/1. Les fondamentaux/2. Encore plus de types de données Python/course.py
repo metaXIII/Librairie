@@ -18,4 +18,4 @@ for line in tm:
 			dict[word] = 1
 
 for word, count in dict.items():
-	print(word + " :" + str(count)) 
+	print(word + " :" + str(count))
