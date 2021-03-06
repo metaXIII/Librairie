@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 
@@ -29,12 +29,10 @@ def do_your_work(value):
     return result
 
 
-SPACE_ORD = " "
-
 if __name__ == '__main__':
     result = ""
     while True:
         for arg in sys.argv[1:]:
-            result += do_your_work(arg) + " " + do_your_work(SPACE_ORD)
+            result += do_your_work(arg) + " " + do_your_work(" ")
         break
     print(result)

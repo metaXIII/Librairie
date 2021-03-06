@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+
+import sys
+
+
 def transition_to_string(value):
     value = value.replace(" ", "")
     if len(value) < 4:
@@ -12,14 +17,14 @@ def transition_to_string(value):
                 to_add += "0"
             transition_to_string(to_add + value)
     else:
-        do_your_work(value)
+        return do_your_work(value)
 
 
 def do_your_work(value):
     result = ""
     for i in range(int(len(value) / 8)):
         result += (bin_to_number(value[i * 8:((i + 1) * 8)]))
-    print(result)
+    return result
 
 
 def bin_to_number(value):
@@ -32,5 +37,9 @@ def bin_to_number(value):
 
 
 if __name__ == '__main__':
-    transition_to_string("01101111 01101110  00100000 01110110 01100001  00100000 01100100 01100101 01110110 01100101 01101110 01101001 01110010  00100000 01110000 01100001 01110010 01100101 01101110 01110100  00100000")  # 8B8B # 8 -> 56 # B -> 66
-    # transition_to_string("   111000 01000010 00111000 01000010")  # 8B8B # 8 -> 56 # B -> 66
+    result = ""
+    while True:
+        for arg in sys.argv[1:]:
+            result += transition_to_string(arg)
+        break
+    print(result)
