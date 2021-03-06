@@ -27,9 +27,10 @@ def bin_to_number(value):
     for i in range(len(value)):
         char = value[i]
         if char == "1":
-            result = result + pow(2, (8 - i) - 1)
+            result = result + pow(2, 7 - i)
     return chr(result)
 
 
 if __name__ == '__main__':
-    transition_to_string("   111000 01000010 00111000 01000010") # 8B8B # 8 -> 56 # B -> 66
+    transition_to_string("01101111 01101110  00100000 01110110 01100001  00100000 01100100 01100101 01110110 01100101 01101110 01101001 01110010  00100000 01110000 01100001 01110010 01100101 01101110 01110100  00100000")  # 8B8B # 8 -> 56 # B -> 66
+    # transition_to_string("   111000 01000010 00111000 01000010")  # 8B8B # 8 -> 56 # B -> 66
