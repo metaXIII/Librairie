@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
-import dechiffrement
-import wordToBinaire
 import sys
+
+import wordToBinaire
+
 
 # XOR Rules
 #   Input 1 Input 2
@@ -27,7 +28,7 @@ if __name__ == '__main__':
     crypted = ""
 
     for arg in sys.argv[2:]:
-        to_crypted += arg
+        to_crypted += arg + " "
     word_bin = wordToBinaire.do_your_work(to_crypted)
     result = ""
     cypher_text = ""
@@ -38,14 +39,12 @@ if __name__ == '__main__':
     dict = {}
     cypher_text = {}
     for i in range(0, max):
-        dict[i] = word_bin_without_space[i * 8:(i+1) * 8]
-
+        dict[i] = word_bin_without_space[i * 8:(i + 1) * 8] + wordToBinaire.do_your_work(" ")
+    result = ""
     for i in range(0, max):
-        result = ""
         for j in range(0, 8):
             result += get_encrypted_text(cle_de_chiffrement_bin[j], dict[i][j])
-        # cypher_text[i] = result
-        crypted += result
+    crypted += result
     print("key :" + cle_de_chiffrement_bin)
     print("mot :" + word_bin)
     print("chiffré :" + crypted)
