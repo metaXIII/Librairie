@@ -2,7 +2,7 @@
 
 import dechiffrement
 import wordToBinaire
-
+import sys
 
 # XOR Rules
 #   Input 1 Input 2
@@ -21,20 +21,31 @@ def get_encrypted_text(clebin, wordbin):
 
 
 if __name__ == '__main__':
-    cle_de_chiffrement = "A"
+    cle_de_chiffrement = sys.argv[1]
     cle_de_chiffrement_bin = wordToBinaire.do_your_work(cle_de_chiffrement)
-    test = "B"
-    word_bin = wordToBinaire.do_your_work(test)
+    to_crypted = ""
+    crypted = ""
+
+    for arg in sys.argv[2:]:
+        to_crypted += arg
+    word_bin = wordToBinaire.do_your_work(to_crypted)
     result = ""
     cypher_text = ""
     i = 0
 
-    while True:
-        cypher_text += get_encrypted_text(cle_de_chiffrement_bin[i], word_bin[i])
-        i += 1
-        if i > 7:
-            break
-    print(cle_de_chiffrement_bin)
-    print(word_bin)
-    print(cypher_text)
-    print(dechiffrement.do_your_work(cypher_text))
+    word_bin_without_space = word_bin.replace(" ", "")
+    max = int(len(word_bin_without_space) / 8)
+    dict = {}
+    cypher_text = {}
+    for i in range(0, max):
+        dict[i] = word_bin_without_space[i * 8:(i+1) * 8]
+
+    for i in range(0, max):
+        result = ""
+        for j in range(0, 8):
+            result += get_encrypted_text(cle_de_chiffrement_bin[j], dict[i][j])
+        # cypher_text[i] = result
+        crypted += result
+    print("key :" + cle_de_chiffrement_bin)
+    print("mot :" + word_bin)
+    print("chiffré :" + crypted)
