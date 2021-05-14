@@ -1,4 +1,4 @@
 # Persistance de données python dans un fichier
 
-Totalement obsolète.
+Totalement obsolète et sans intérêt
 

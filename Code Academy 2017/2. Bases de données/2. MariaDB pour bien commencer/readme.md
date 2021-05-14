@@ -43,6 +43,13 @@ Pour travailler avec les bases de données, il est préférables d'attribuer les
     mysqldump [nom de la base de données] [nom de la table] -u root -p > save.sql
 ```
 Cette commande permet de récupérer une table d'une base de données dans un fichier (save.sql ici)
+Dans ce cas, la table sera exporté sans la commande de création de la base de données.
+Si vous souhaitez exporter une database entière, vous pouvez utiliser : 
+```
+    mysqldump -B [nom de la base de données] -u root -p > save.sql
+```
+
+
 
 ## Insertion depuis un fichier
 

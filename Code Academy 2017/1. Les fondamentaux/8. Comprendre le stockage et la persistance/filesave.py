@@ -6,9 +6,15 @@
 #     file.write("{0}\n".format(feed))
 import json
 
-feeds = ["http://newsrss.bbc.co.uk/rss/newsonline_uk_edutuib/front_page/rss.xml", "http://www.tuxradar.com/rss"]
-with open("exist.txt", "a") as file:
-    json.dump(feeds, file)
-with open("exist.txt", "r") as file:
-    feeds = json.load(file)
-    print(feeds)
+
+def some():
+    feeds = ["http://newsrss.bbc.co.uk/rss/newsonline_uk_edutuib/front_page/rss.xml", "http://www.tuxradar.com/rss"]
+    with open("exist.txt", "a") as file:
+        json.dump(feeds, file)
+    with open("exist.txt", "r") as file:
+        feeds = json.load(file)
+        print(feeds)
+
+
+if __name__ == '__main__':
+    some()

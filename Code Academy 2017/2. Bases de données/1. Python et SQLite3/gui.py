@@ -20,8 +20,7 @@ def callBack():
     for f in field_names:
         text.insert("insert", "\t" + f + "\n")
 
-
-database = sys.argv[1]
+database = sys.argv[1] if len(sys.argv) > 1 else "LXF.sqlite"
 
 conn = sqlite3.connect(database)
 c = conn.cursor()
