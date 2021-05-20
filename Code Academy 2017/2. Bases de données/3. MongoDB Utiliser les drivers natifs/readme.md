@@ -41,3 +41,14 @@ python connect.py
 
 Quelques notions sont abordés mais le cours est obsolète. Voir exemple.
 
+### Crud Method
+
+
+|Command|Method|
+|-------|------|
+|find() | Read but return a collection| 
+|findOne() | Read but retorn only one object |
+|delete_many() |delete|
+|insert_one() |insert |
+|someData.update_one() | update |
+
