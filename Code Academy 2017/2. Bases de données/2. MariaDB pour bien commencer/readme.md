@@ -57,3 +57,11 @@ Si vous souhaitez exporter une database entière, vous pouvez utiliser :
     mysql [nom de la base de données] -u root -p < save.sql
 ```
 Cette commande permet d'insérer depuis un fichier des données dans la base de données.
+
+
+## Export de toutes les bases en même temps
+
+````
+mysqldump --all-databases -a -u root -p
+```
+Cette commande permet d'exporter toutes les bases de données en même temps.
