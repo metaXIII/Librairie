@@ -1,0 +1,18 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "jest --watchAll --verbose",
+    "test-coverage": "jest --watchAll --verbose --coverage",
+    "e2e": "cypress open"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "vite": "^2.3.7"
+  },
+  "dependencies": {
+    "jest": "^27.0.4"
+  }
+}
