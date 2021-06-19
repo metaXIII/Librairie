@@ -8,3 +8,7 @@
 fireship-io/tdd-basics/test-demo/coverage/
 
 fireship-io/tdd-basics/test-demo/cypress/fixtures/
+
+fireship-io/GraphQL/graphql-apollo/.browserslistrc
+
+fireship-io/GraphQL/graphql-apollo/.editorconfig
