@@ -1,0 +1,24 @@
+{
+  "name": "kata-technical-workshop-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --experimental-json-modules src/index.js",
+    "test": "jest --watch"
+  },
+  "keywords": [
+    "kata",
+    "refactor",
+    "legacy",
+    "clean"
+  ],
+  "author": "Romy Alula",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "26.6.3"
+  },
+  "dependencies": {
+    "prompt-sync": "4.2.0"
+  }
+}
