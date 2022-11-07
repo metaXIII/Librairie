@@ -24,7 +24,7 @@
     "@angular/router": "~14.2.0",
     "@apollo/client": "^3.6.6",
     "apollo-angular": "^4.0.0",
-    "graphql": "^15.8.0",
+    "graphql": "^16.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.4.0",
     "zone.js": "~0.11.4"
