@@ -51,6 +51,6 @@
     "@electron-forge/maker-squirrel": "^6.0.4",
     "@electron-forge/maker-zip": "^6.0.4",
     "devtron": "^1.4.0",
-    "electron": "23.1.2"
+    "electron": "23.1.3"
   }
 }
