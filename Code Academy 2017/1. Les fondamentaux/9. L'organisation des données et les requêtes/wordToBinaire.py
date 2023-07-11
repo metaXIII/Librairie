@@ -22,7 +22,7 @@ def word_to_bin(char):
     return bin_to_ord(ord(char)) + " "
 
 
-def do_your_work(value):
+def to_binarie(value):
     result = ""
     for char in value:
         result += word_to_bin(char)
@@ -30,9 +30,4 @@ def do_your_work(value):
 
 
 if __name__ == '__main__':
-    result = ""
-    while True:
-        for arg in sys.argv[1:]:
-            result += do_your_work(arg) + " " + do_your_work(" ")
-        break
-    print(result)
+    exit()
