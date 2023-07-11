@@ -22,29 +22,23 @@ def get_encrypted_text(clebin, wordbin):
 
 
 if __name__ == '__main__':
-    cle_de_chiffrement = sys.argv[1]
-    cle_de_chiffrement_bin = wordToBinaire.do_your_work(cle_de_chiffrement)
-    to_crypted = ""
-    crypted = ""
-
-    for arg in sys.argv[2:]:
-        to_crypted += arg + " "
-    word_bin = wordToBinaire.do_your_work(to_crypted)
+    if (len(sys.argv)) != 3:
+        print("end of program, should only be two args")
+        exit()
+    key = sys.argv[1]
+    to_convert = sys.argv[2]
+    key = wordToBinaire.to_binarie(key).replace(" ", "")
+    to_convert = wordToBinaire.to_binarie(to_convert).replace(" ", "")
+    while len(key) != len(to_convert):
+        if len(key) < len(to_convert):
+            key = (key[::-1] + "0")[::-1]
+        else:
+            to_convert = (to_convert[::-1] + "0")[::-1]
     result = ""
-    cypher_text = ""
-    i = 0
-
-    word_bin_without_space = word_bin.replace(" ", "")
-    max = int(len(word_bin_without_space) / 8)
-    dict = {}
-    cypher_text = {}
-    for i in range(0, max):
-        dict[i] = word_bin_without_space[i * 8:(i + 1) * 8] + wordToBinaire.do_your_work(" ")
-    result = ""
-    for i in range(0, max):
-        for j in range(0, 8):
-            result += get_encrypted_text(cle_de_chiffrement_bin[j], dict[i][j])
-    crypted += result
-    print("key :" + cle_de_chiffrement_bin)
-    print("mot :" + word_bin)
-    print("chiffré :" + crypted)
+    position = 0
+    for char in to_convert:
+        result += get_encrypted_text(char, key[position])
+        position += 1
+    print("key: " + key)
+    print("mot: " + to_convert)
+    print("chiffré: " + result)
