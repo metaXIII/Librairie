@@ -41,15 +41,3 @@ if __name__ == '__main__':
         i += 1
     print(result)
     print("déchiffré :", binaireToWord.do_your_work(result))
-
-    # for i in range(2, len(sys.argv)):
-    #     if len(sys.argv[i]) > 8:
-    #         for j in range(0, int(len(sys.argv[i]) / 8)):
-    #             cypher_text[i + j - 2 + max_len] = sys.argv[i][8 * j:8 * (j + 1)]
-    #             j += 1
-    #         max_len += 1
-    #     else:
-    #         cypher_text[i - 2 + max_len] = sys.argv[i]
-    # for x in range(0, len(cypher_text)):
-    #     result += do_your_work(cle_de_chiffrement_bin, cypher_text[x])
-    # print("déchiffré : " + result)
